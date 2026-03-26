@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Analytics Course | KwaraTech Academy</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome 6 (free) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="stylesheet" type="text/CSS" href="assets/css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="navbar navbar-expand-lg navbar-dark fixed-top">
+            <div class="container">
+                <a class="navbar-brand mt-2" href="index.html">
+                    <h4 class="mb-0">KwaraTech</h4>
+                    <p class="text-end text-sm" style="font-size: 13px;"><small>Academy</small></p>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#my_navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="my_navbar">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a href="index.html#benefits" class="nav-link">Benefits</a></li>
+                        <li class="nav-item"><a href="index.html#tools-contact" class="nav-link">Tools</a></li>
+                        <li class="nav-item"><a href="index.html#tools-contact" class="nav-link">Contact Us</a></li>
+                        <li class="nav-item"><a href="signup.html" class="nav-link">Join Now</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main registration area -->
+    <div class="register-wrapper">
+        <div class="register-card">
+            <div class="row g-0">
+                <!-- Left: Program highlights (from banner) -->
+                <div class="col-lg-5">
+                    <div class="program-highlight">
+                        <h2>12 Weeks<br>Data Analytics</h2>
+                        <p style="opacity: 0.9; font-size: 1.1rem;">Microsoft Certified · PL-300 ready</p>
+                        
+                        <div class="badge-container">
+                            <span class="info-badge"><i class="fab fa-microsoft"></i> Internships</span>
+                            <span class="info-badge"><i class="fas fa-ticket-alt"></i> Exam voucher</span>
+                            <span class="info-badge"><i class="fas fa-calendar"></i> Start 1<sup>st</sup> April</span>
+                        </div>
+                        
+                        <div class="price-tag">
+                            <small>350K</small> 200K NGN
+                        </div>
+                        
+                        <div class="tools-mini">
+                            <span><i class="fas fa-file-excel"></i> Excel</span>
+                            <span><i class="fas fa-chart-pie"></i> Power BI</span>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <p><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Hands-on learning</p>
+                            <p><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> Real-world case studies</p>
+                            <p><i class="fas fa-check-circle" style="color: var(--secondary-color);"></i> CV revamp & portfolio</p>
+                        </div>
+                        
+                        <!-- urgent slots only -->
+                        <div class="urgent-stripe mt-3" style="background: #1e3347; border-radius: 60px; padding: 0.5rem 1rem;">
+                            <i class="fas fa-users"></i> 25 slots only · filling fast <i class="fas fa-exclamation-circle"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right: Registration Form -->
+                <div class="col-lg-7">
+                    <div class="form-section">
+                        <h3>Secure your seat</h3>
+                        <div class="subtitle">Join the 12-week journey — become globally recognized</div>
+                        
+                        <form id="registrationForm" novalidate>
+                            <!-- Full name -->
+                            <div class="mb-3">
+                                <label for="fullName" class="form-label">Full name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control" id="fullName" placeholder="Enter your full name here" required>
+                                <div class="error-feedback" id="nameError">Please enter your full name</div>
+                            </div>
+                            
+                            <!-- Email -->
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email address <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your E-mail here" required>
+                                <div class="error-feedback" id="emailError">Enter a valid email address</div>
+                            </div>
+                            
+                            <!-- Phone (with country code hint) -->
+                            <div class="mb-3">
+                                <label for="phone" class="form-label">Phone number <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="fas fa-phone-alt"></i> +234</span>
+                                    <input type="tel" class="form-control" id="phone" placeholder="Insert your phone number here" required pattern="[0-9]{10,}">
+                                </div>
+                                <div class="error-feedback" id="phoneError">Enter at least 10 digits after +234</div>
+                                <small class="text-muted">e.g., 9123456789 (10 digits)</small>
+                            </div>
+                            
+                            <!-- Education level (select) -->
+                            <div class="mb-3">
+                                <label for="education" class="form-label">Highest education <span class="text-danger">*</span></label>
+                                <select class="form-select" id="education" required>
+                                    <option value="" disabled selected>-- select --</option>
+                                    <option value="highschool">High School</option>
+                                    <option value="bachelors">Bachelor's degree</option>
+                                    <option value="masters">Master's degree</option>
+                                    <option value="diploma">Diploma</option>
+                                    <option value="other">Other</option>
+                                </select>
+                                <div class="error-feedback" id="eduError">Please select your education level</div>
+                            </div>
+                            
+                            <!-- Experience with data (optional) -->
+                            <div class="mb-3">
+                                <label for="experience" class="form-label">Experience with Excel / Power BI</label>
+                                <select class="form-select" id="experience">
+                                    <option value="" disabled selected>-- select (optional) --</option>
+                                    <option value="beginner">Beginner (no experience)</option>
+                                    <option value="intermediate">Intermediate (some knowledge)</option>
+                                    <option value="advanced">Advanced (regular user)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- How did you hear? -->
+                            <div class="mb-3">
+                                <label for="referral" class="form-label">How did you hear about us?</label>
+                                <select class="form-select" id="referral">
+                                    <option value="" disabled selected>-- select (optional) --</option>
+                                    <option value="whatsapp">WhatsApp</option>
+                                    <option value="instagram">Instagram</option>
+                                    <option value="friend">Friend/Colleague</option>
+                                    <option value="ad">Online ad</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <!-- Terms and conditions -->
+                            <div class="form-check mb-3">
+                                <input class="form-check-input" type="checkbox" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">
+                                    I agree to the <a href="#" class="text-primary">terms and conditions</a> and confirm that the information is correct. <span class="text-danger">*</span>
+                                </label>
+                                <div class="error-feedback" id="termsError">You must agree to continue</div>
+                            </div>
+                            
+                            <!-- Submit button -->
+                            <button type="submit" class="btn-register"><i class="fas fa-user-graduate"></i> Register for 200K</button>
+                            
+                            <!-- extra contact hint -->
+                            <p class="text-center mt-3 mb-0 small text-secondary">
+                                <i class="fas fa-headset"></i> Questions? Call <strong>+234 916 646 4635</strong>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- small footer note -->
+        <div class="text-center mt-4 text-light small">
+            <i class="fas fa-shield-alt"></i> Your data is secure · No spam · PL-300 voucher included
+        </div>
+    </div>
+
+    <footer class="footer-note">
+        <div class="container">
+            <span><i class="fas fa-check-circle"></i> 12 weeks · Microsoft certified with internship · 25 slots only · <strong>fee 200K</strong> <del>350K</del></span>
+            <br class="d-md-none">
+            <span class="ms-3"><i class="fas fa-fire"></i> spots filling fast - join now</span>
+        </div>
+    </footer>
+
+    <!-- Payment Instruction Modal (hidden initially) -->
+    <div class="modal fade payment-modal" id="paymentModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div style="width: 100%;">
+                        <i class="fas fa-check-circle fa-3x mb-2" style="color: var(--secondary-color);"></i>
+                        <h4 class="modal-title fw-bold">Registration received!</h4>
+                    </div>
+                </div>
+                <div class="modal-body text-center">
+                    <p class="fs-5">Thank you for registering, <span id="displayName" class="fw-bold">Student</span>!</p>
+                    <p>Please complete your enrollment by making the payment to the account below:</p>
+                    
+                    <div class="account-box">
+                        <div class="account-detail">
+                            <span>Bank:</span>
+                            <span>FCMB (First City Monument Bank PLC)<i class="fas fa-university ms-1"></i></span>
+                        </div>
+                        <div class="account-detail">
+                            <span>Account name:</span>
+                            <span>KWARA TECH ACADEMY LTD</span>
+                        </div>
+                        <div class="account-detail">
+                            <span>Account number:</span>
+                            <span class="d-flex align-items-center gap-2">
+                                <strong>2000716308</strong>
+                                <span class="btn-copy" id="copyAccountBtn"><i class="far fa-copy"></i> copy</span>
+                            </span>
+                        </div>
+                        <div class="account-detail">
+                            <span>Amount:</span>
+                            <span class="amt-highlight">200,000 NGN</span>
+                        </div>
+                    </div>
+                    
+                    <p class="mt-3 fw-semibold">After payment, forward your receipt to our WhatsApp for confirmation.</p>
+                    
+                    <!-- WhatsApp redirect button -->
+                    <a href="https://wa.me/2349166464635?text=Hello%20KwaraTech%2C%20I%20just%20made%20payment%20for%20the%2012-week%20Data%20Analytics%20course.%20Please%20find%20attached%20my%20payment%20receipt.%20Thanks" 
+                       target="_blank" 
+                       class="whatsapp-btn mt-2 mb-3" 
+                       id="whatsappRedirectBtn">
+                        <i class="fab fa-whatsapp"></i> Forward receipt on WhatsApp
+                    </a>
+                    
+                    <p class="small text-muted">You'll receive a confirmation within 2 hours. Your seat is reserved for 24 hours.</p>
+                    <button type="button" class="btn btn-outline-secondary mt-2" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS + custom form validation with modal trigger -->
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        (function() {
+            'use strict';
+            
+            // Get form elements
+            const form = document.getElementById('registrationForm');
+            const fullName = document.getElementById('fullName');
+            const email = document.getElementById('email');
+            const phone = document.getElementById('phone');
+            const education = document.getElementById('education');
+            const terms = document.getElementById('termsCheck');
+            
+            // Error spans
+            const nameError = document.getElementById('nameError');
+            const emailError = document.getElementById('emailError');
+            const phoneError = document.getElementById('phoneError');
+            const eduError = document.getElementById('eduError');
+            const termsError = document.getElementById('termsError');
+            
+            // Modal elements
+            const paymentModal = new bootstrap.Modal(document.getElementById('paymentModal'));
+            const displayNameSpan = document.getElementById('displayName');
+            const whatsappBtn = document.getElementById('whatsappRedirectBtn');
+            const copyAccountBtn = document.getElementById('copyAccountBtn');
+            
+            // Real-time validation styling
+            function validateField(field, condition, errorElement) {
+                if (condition) {
+                    field.classList.remove('is-invalid');
+                    field.classList.add('is-valid');
+                    if (errorElement) errorElement.style.display = 'none';
+                } else {
+                    field.classList.remove('is-valid');
+                    field.classList.add('is-invalid');
+                    if (errorElement) errorElement.style.display = 'block';
+                }
+            }
+            
+            // name validation
+            fullName.addEventListener('input', function() {
+                validateField(fullName, fullName.value.trim().length >= 3, nameError);
+            });
+            
+            // email validation
+            email.addEventListener('input', function() {
+                const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+                validateField(email, isValid, emailError);
+            });
+            
+            // phone validation (after +234 prefix, at least 10 digits)
+            phone.addEventListener('input', function() {
+                const phoneVal = phone.value.replace(/\D/g, '');
+                const isValid = phoneVal.length >= 10 && phoneVal.length <= 15;
+                validateField(phone, isValid, phoneError);
+            });
+            
+            // education validation
+            education.addEventListener('change', function() {
+                validateField(education, education.value !== '', eduError);
+            });
+            
+            // terms validation (special)
+            terms.addEventListener('change', function() {
+                if (terms.checked) {
+                    terms.classList.remove('is-invalid');
+                    termsError.style.display = 'none';
+                } else {
+                    terms.classList.add('is-invalid');
+                    termsError.style.display = 'block';
+                }
+            });
+            
+            // Form submit handler
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                
+                let isValid = true;
+                
+                // Validate full name
+                if (fullName.value.trim().length < 3) {
+                    validateField(fullName, false, nameError);
+                    isValid = false;
+                } else {
+                    validateField(fullName, true, nameError);
+                }
+                
+                // Validate email
+                const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value);
+                validateField(email, emailValid, emailError);
+                if (!emailValid) isValid = false;
+                
+                // Validate phone
+                const phoneDigits = phone.value.replace(/\D/g, '');
+                const phoneValid = phoneDigits.length >= 10 && phoneDigits.length <= 15;
+                validateField(phone, phoneValid, phoneError);
+                if (!phoneValid) isValid = false;
+                
+                // Validate education
+                if (education.value === '') {
+                    validateField(education, false, eduError);
+                    isValid = false;
+                } else {
+                    validateField(education, true, eduError);
+                }
+                
+                // Validate terms
+                if (!terms.checked) {
+                    terms.classList.add('is-invalid');
+                    termsError.style.display = 'block';
+                    isValid = false;
+                } else {
+                    terms.classList.remove('is-invalid');
+                    termsError.style.display = 'none';
+                }
+                
+                // If all valid, show payment instruction modal
+                if (isValid) {
+                    // Set the student's name in the modal
+                    const studentName = fullName.value.trim();
+                    displayNameSpan.textContent = studentName;
+                    
+                    // Optional: customize WhatsApp message with name/phone (already has base text)
+                    const phoneNumber = phone.value.trim();
+                    const emailAddr = email.value.trim();
+                    // Update WhatsApp link with more context (optional)
+                    const baseWhatsApp = "https://wa.me/2349166464635?text=";
+                    const message = `Hello KwaraTech, I just made payment for the 12-week Data Analytics course.%0A%0AName: ${encodeURIComponent(studentName)}%0APhone: +234${encodeURIComponent(phoneNumber)}%0AEmail: ${encodeURIComponent(emailAddr)}%0A%0AI've attached my payment receipt. Thanks.`;
+                    whatsappBtn.href = `https://wa.me/2349166464635?text=${message}`;
+                    
+                    // Show the modal
+                    paymentModal.show();
+                    
+                    // Optionally reset form after modal is hidden? we can keep data for now
+                    // but we can also leave it as is.
+                } else {
+                    // scroll to first error
+                    const firstInvalid = document.querySelector('.is-invalid');
+                    if (firstInvalid) {
+                        firstInvalid.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                }
+            });
+            
+            // Copy account number functionality
+            copyAccountBtn.addEventListener('click', function() {
+                const accountNum = "2000716308"; // dummy account
+                navigator.clipboard.writeText(accountNum).then(() => {
+                    const originalText = copyAccountBtn.innerHTML;
+                    copyAccountBtn.innerHTML = '<i class="fas fa-check"></i> copied';
+                    setTimeout(() => {
+                        copyAccountBtn.innerHTML = '<i class="far fa-copy"></i> copy';
+                    }, 2000);
+                }).catch(err => {
+                    alert('Could not copy, please manually copy: 2000716308');
+                });
+            });
+            
+        })();
+    </script>
+</body>
+</html>
