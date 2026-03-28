@@ -11,7 +11,7 @@
 
 body{
     margin: 0 !important;
-    background-image: url('../images/hero.jpg');
+    background-image: url('../images/hero.webp');
     background-size: cover;
     background-attachment: fixed;
     backdrop-filter: blur(10px);
