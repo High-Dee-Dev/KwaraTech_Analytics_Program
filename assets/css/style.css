@@ -746,23 +746,24 @@ section.hero-section{
     }
 
     .modal-header i{
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .modal-header .modal-title{
-        font-size: 15px;
+        font-size: 13px;
     }
 
     .modal-body p{
-        font-size: 13px !important;
+        font-size: 12px !important;
     }
 
     .modal-body .account-detail span{
-        font-size: 14px !important;
+        font-size: 12px !important;
     }
 
     .modal-body a.whatsapp-btn{
-        font-size: 15px;
+        font-size: 13px;
+        padding: 10px;
     }
 }
 
@@ -809,7 +810,7 @@ section.hero-section{
     z-index: var(--bs-modal-zindex);
     display: none;
     width: 100vw;
-    height: 100vh;
+    max-height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     outline: 0
@@ -818,6 +819,7 @@ section.hero-section{
 .modal-dialog {
     position: relative;
     width: auto;
+    max-height: 90vh;
     margin: var(--bs-modal-margin);
     pointer-events: none
 }
